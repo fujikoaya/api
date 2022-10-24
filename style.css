@@ -1,23 +1,27 @@
-body{
-text-align: center;
+body {
+    text-align: center;
 }
-.maintitle{
-font-size: 60px;
-margin: 50px auto;
+
+.maintitle {
+    font-size: 60px;
+    margin: 50px auto;
 }
 
 .btn{
-font-size: 30px;
-border: 1px solid black;
-border-radius: 5%;
-padding: 5px;
-margin: 20px auto;
-background-color: bisque;
+width: 30px;
+height: 30px;
 }
 
-img{
+img {
+    margin: 0 auto;
     display: block;
-width: 700px;
-height: 700px;
+    width: 700px;
+    height: 700px;
+}
+
+
+.result {
+    font-size: 100px;
+    color: red;
 
 }

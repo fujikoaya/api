@@ -2,7 +2,7 @@ $(function () {
     let list = ['大吉','中吉','小吉','吉','区'];
     $('button').on('click', function () {
         let random = Math.floor(Math.random()* list.length);
-        $('.result').append(list[random]) ;
+        $('.result').append(list[random]);
         // console.log(‘tete’);
         // AJAXの書き方
         $.ajax({
@@ -21,6 +21,7 @@ $(function () {
                 paragraph.attr('src', response.file);
                 $('.result').append(paragraph)
                 //成功したとき実行したいスクリプトを記載
+
             })
             .fail(function (xhr) {
                 //通信失敗時の処理
