@@ -1,5 +1,9 @@
 $(function () {
-    let list = ['大吉', '中吉', '小吉', '吉', '区'];
+    let list = ['「大吉」 <p>非常に良い一日でしょう</p>',
+                '「中吉」 <p>素敵な一日でしょう</p>',
+                 '「小吉」　<p>良い一日でしょう</p>',
+                  '「吉」 <p>平凡な一日でしょう</p>',
+                   '「区」 <p>猫と戯れましょう</p>'];
     $('button').on('click', function () {
         let random = Math.floor(Math.random() * list.length);
         $('.result').append(list[random]);
@@ -35,6 +39,9 @@ $(function () {
                 //通信完了時の処理
                 //結果に関わらず実行したいスクリプトを記載
             });
-    })
+    });
+
+
+
 })
 

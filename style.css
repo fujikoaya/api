@@ -1,27 +1,65 @@
+html{
+background-image: url("https://beiz.jp/images_P/cloth/cloth_00146.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
 body {
+    font-family: "Hannari";
+    background-repeat: no-repeat;
+    background-size: cover;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-blend-mode: lighten;
     text-align: center;
 }
 
-.maintitle {
+
+.main {
+display: flex;
+justify-content: space-between;
     font-size: 60px;
     margin: 50px auto;
 }
-
-.btn{
-width: 30px;
-height: 30px;
+/* .maintitle{
+    padding: 5px 10px;
+background-color: burlywood;
+border: 10px solid cadetblue;
+} */
+.cat-img1{
+    margin-top: 100px;
+width: 200px;
+height: 250px;
 }
+.mainvisual{
+display: block;
+}
+mai
 
-img {
+.btn-comment{
+font-size: 20px;
+font-weight: 200;
+}
+.btn {
+    width: 70px;
+    height: 70px;
+    margin: 15px auto;
+    border-radius: 50%;
+}
+.btn:hover{
+transform: translateY(10px);
+}
+.result img {
     margin: 0 auto;
+    margin-bottom: 50px;
     display: block;
     width: 700px;
-    height: 700px;
+    height: 500px;
+    border: 10px solid whitesmoke;
 }
 
 
 .result {
-    font-size: 100px;
+    font-family: "Hannari";
+    font-size: 60px;
     color: red;
 
 }
