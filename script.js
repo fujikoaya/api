@@ -1,27 +1,31 @@
 $(function () {
-    let list = ['大吉','中吉','小吉','吉','区'];
+    let list = ['大吉', '中吉', '小吉', '吉', '区'];
     $('button').on('click', function () {
-        let random = Math.floor(Math.random()* list.length);
+        let random = Math.floor(Math.random() * list.length);
         $('.result').append(list[random]);
-        // console.log(‘tete’);
+        $('.result')
+
+        // console.log('tete');
         // AJAXの書き方
         $.ajax({
             url: 'https://aws.random.cat/meow', //アクセスするURL
             type: 'get', //post or get
             cache: false,        //cacheを使うか使わないかを設定
             dataType: 'json',     //data type script・xmlDocument・jsonなど
-            // data: data,           //アクセスするときに必要なデータを記載
+            // data: data,           //アクセスするときに必要なデータを記載      
         })
             .done(function (response) {
                 console.log(response);
                 console.log(response.file);
                 //通信成功時の処理
-                var paragraph = $('<img>');
-                console.log(paragraph);
-                paragraph.attr('src', response.file);
-                $('.result').append(paragraph)
-                //成功したとき実行したいスクリプトを記載
+                // var paragraph = $('<img>');
+                // console.log(paragraph);
+                // paragraph.attr('src', response.file);
+                var template = `<p>${list[random]}</p>
+                <img src="${response.file}" alt="">`
+                $('.result').html(template);
 
+                //成功したとき実行したいスクリプトを記載
             })
             .fail(function (xhr) {
                 //通信失敗時の処理
@@ -33,3 +37,4 @@ $(function () {
             });
     })
 })
+
