@@ -1,7 +1,10 @@
 $(function () {
+    let list = ['大吉','中吉','小吉','吉','区'];
     $('button').on('click', function () {
+        let random = Math.floor(Math.random()* list.length);
+        $('.result').append(list[random]) ;
         // console.log('tete');
-// AJAXの書き方
+        // AJAXの書き方
         $.ajax({
             url: 'https://aws.random.cat/meow', //アクセスするURL
             type: 'get', //post or get
@@ -15,7 +18,7 @@ $(function () {
                 //通信成功時の処理
                 var paragraph = $('<img>');
                 console.log(paragraph);
-                paragraph.attr('src',response.file);
+                paragraph.attr('src', response.file);
                 $('.result').append(paragraph)
                 //成功したとき実行したいスクリプトを記載
             })
