@@ -28,6 +28,7 @@ $(function () {
                 var template = `<p>${list[random]}</p>
                 <img src="${response.file}" alt="">`
                 $('.result').html(template);
+                $(window).scrollTop(600);
 
                 //成功したとき実行したいスクリプトを記載
             })
