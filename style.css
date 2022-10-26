@@ -22,6 +22,7 @@ body {
 }
 
 .maintitle {
+    width: 300px;
     position: relative;
     padding: 0.05em 1em;
     border-top: solid 3px black;
