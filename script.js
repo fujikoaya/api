@@ -1,9 +1,9 @@
 $(function () {
     let list = ['「大吉」 <p>非常に良い一日でしょう</p>',
-                '「中吉」 <p>素敵な一日でしょう</p>',
-                 '「小吉」　<p>良い一日でしょう</p>',
-                  '「吉」 <p>平凡な一日でしょう</p>',
-                   '「区」 <p>猫と戯れましょう</p>'];
+        '「中吉」 <p>素敵な一日でしょう</p>',
+        '「小吉」　<p>良い一日でしょう</p>',
+        '「吉」 <p>平凡な一日でしょう</p>',
+        '「区」 <p>猫と戯れましょう</p>'];
     $('button').on('click', function () {
         let random = Math.floor(Math.random() * list.length);
         $('.result').append(list[random]);
@@ -29,7 +29,6 @@ $(function () {
                 <img src="${response.file}" alt="">`
                 $('.result').html(template);
                 $(window).scrollTop(600);
-
                 //成功したとき実行したいスクリプトを記載
             })
             .fail(function (xhr) {
